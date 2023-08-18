@@ -90,11 +90,11 @@ def main():
 
         with col3:
             st.subheader("Podcast Guest")
-            st.write(podcast_info.get('podcast_guest').get('name'))
+            st.write(podcast_info.get('podcast_guest').get('name') if podcast_info.get('podcast_guest') else podcast_info.get('podcast_guest'))
 
         with col4:
             st.subheader("Podcast Guest Details")
-            st.write(podcast_info.get('podcast_guest').get('summary'))
+            st.write(podcast_info.get('podcast_guest').get('summary') if podcast_info.get('podcast_guest') else podcast_info.get('podcast_guest'))
 
         # Display the five key moments
         st.subheader("Key Moments")
